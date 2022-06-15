@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "yarn tailwindcss -w -i ./src/css/style.css -o ./dist/css/style.css",
+    "prod": "yarn tailwindcss -m -i ./src/css/style.css -o ./dist/css/style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
+  }
+}
