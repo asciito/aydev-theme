@@ -5,3 +5,32 @@
 [x-cloak] {
     display: none !important;
 }
+
+.ay-border {
+    @apply border-2 border-raising-black;
+}
+
+.ay-basic-container {
+    @apply ay-border p-4;
+}
+
+.primary-menu-item {
+    @apply bg-floral-white -mb-[3.4rem];
+}
+
+.primary-menu-item > a {
+    @apply block hover:bg-[#c3c3c33c] px-12 py-4;
+}
+
+.footer-menu-item {
+    @apply flex items-center;
+}
+
+.footer-menu-item > a {
+    @apply hover:text-cinnamon-satin;
+}
+
+.footer-menu-item:not(:first-child)::before {
+    content: "";
+    @apply w-[3px] h-8 bg-raising-black rounded-sm mr-4;
+}
