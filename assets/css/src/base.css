@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply bg-floral-white text-raisin-black p-5;
+}
+
+.border-container {
+    @apply border border-raisin-black;
+}
+
+.box-container {
+    @apply border-container p-5;
+}
+
+.header-container {
+    @apply border-container px-5 pt-5 pb-10;
+}
+
+.main-container {
+    @apply border-container px-5 py-10;
+}
+
+/* Menu */
+.ay-nav-container {
+    @apply relative mt-5;
+}
+
+.ay-nav-container > ul#ay-primary-menu {
+    @apply absolute w-full flex justify-center;
+}
+
+ul#ay-primary-menu .ay-menu-item {
+    @apply bg-floral-white text-raisin-black
+            uppercase text-2xl
+            border-container cursor-pointer;
+}
+
+ul#ay-primary-menu .ay-menu-item > a {
+    @apply block w-full h-full p-5;
+}

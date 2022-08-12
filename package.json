@@ -1,0 +1,17 @@
+{
+  "name": "aydev-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/src/base.css -o ./assets/css/dist/base.css -w",
+    "prod": "tailwindcss -i ./assets/css/src/base.css -o ./assets/css/dist/base.css -m"
+  },
+  "author": "asciito",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}
