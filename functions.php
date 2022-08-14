@@ -25,12 +25,20 @@ add_action( 'after_setup_theme', 'aydev_setup_theme' );
 
 if ( !function_exists( 'aydev_register_menus' ) )
 {
-    function aydev_nav_menu_css_class($classes, $item)
+    function aydev_nav_menu_css_class($classes, $item, $nav_menu_obj)
     {
-        return ['ay-menu-item'];
+        $theme_location = $nav_menu_obj->theme_location ?? null;
+        
+        if ( $theme_location == 'primary-menu' ) {
+            return ['ay-menu-item'];
+        } elseif ( $theme_location == 'social-menu' ) {
+            return ['ay-social-item'];
+        } else {
+            return $classes;
+        }
     }
 }
-add_filter( 'nav_menu_css_class', 'aydev_nav_menu_css_class', 10, 2);
+add_filter( 'nav_menu_css_class', 'aydev_nav_menu_css_class', 10, 3);
 
 if ( !function_exists( 'aydev_enqueue_styles' ) )
 {

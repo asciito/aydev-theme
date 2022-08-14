@@ -11,6 +11,7 @@ module.exports = {
         'floral-white': '#fdf9f3',
         'gainsboro': '#dcdbdb',
         'raisin-black': '#2c292d',
+        'brink-pink': '#ff6188',
       }
     },
   },

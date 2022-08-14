@@ -41,3 +41,15 @@ ul#ay-primary-menu .ay-menu-item {
 ul#ay-primary-menu .ay-menu-item > a {
     @apply block w-full h-full p-5;
 }
+
+.ay-social-container {
+    @apply mt-36;
+}
+
+.ay-social-container > ul#ay-social-menu {
+    @apply flex justify-center space-x-4;
+}
+
+ul#ay-social-menu .ay-social-item > a {
+    @apply block hover:text-brink-pink active:brightness-75;
+}
