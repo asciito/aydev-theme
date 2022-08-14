@@ -7,6 +7,19 @@ body {
     @apply bg-floral-white text-raisin-black p-5;
 }
 
+/* Dotted background, code inspiration https://stackoverflow.com/questions/55364127/making-a-dotted-grid-with-css/55364821#55364821 */
+@layer base {
+    .bg-dotted {
+        /* Colors */
+        --bg-color: #dcdbdb;
+
+        background: var(--bg-color);
+        background-image: radial-gradient(#c3c3c3 1px, transparent 0);
+        background-size: 22px 22px;
+        background-position: -19px -19px;
+    }
+}
+
 .border-container {
     @apply border-2 border-raisin-black;
 }
@@ -33,7 +46,7 @@ body {
 }
 
 ul#ay-primary-menu .ay-menu-item {
-    @apply bg-floral-white hover:bg-[#dcdbdb] text-raisin-black
+    @apply bg-floral-white hover:bg-dotted transition-colors text-raisin-black
             uppercase text-2xl
             border-container cursor-pointer;
 }
