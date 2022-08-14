@@ -10,7 +10,7 @@
 <body>
     <header class="header-container mb-16">
         <div class="logo-image flex justify-center">
-            <img src="https://picsum.photos/seed/girl/250/250" class="w-100 max-w-full rounded-full grayscale-[10]">
+            <img src="https://picsum.photos/seed/girl/250/250" class="w-100 max-w-full rounded-full grayscale-[10] box-container">
         </div>
 
         <?php
@@ -27,3 +27,4 @@
     </header>
 
     <main class="main-container">
+        <div class="inner-container max-w-7xl lg:max-w-[1500px] mx-auto">
