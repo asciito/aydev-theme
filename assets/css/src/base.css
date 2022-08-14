@@ -29,11 +29,11 @@ body {
 }
 
 .ay-nav-container > ul#ay-primary-menu {
-    @apply absolute w-full flex justify-center;
+    @apply absolute w-full flex justify-center space-x-4;
 }
 
 ul#ay-primary-menu .ay-menu-item {
-    @apply bg-floral-white text-raisin-black
+    @apply bg-floral-white hover:bg-[#dcdbdb] text-raisin-black
             uppercase text-2xl
             border-container cursor-pointer;
 }
