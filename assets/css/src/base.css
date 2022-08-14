@@ -8,7 +8,7 @@ body {
 }
 
 .border-container {
-    @apply border border-raisin-black;
+    @apply border-2 border-raisin-black;
 }
 
 .box-container {
