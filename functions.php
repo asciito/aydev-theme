@@ -53,3 +53,10 @@ if ( !function_exists( 'aydev_enqueue_styles' ) )
     }
 }
 add_action('wp_enqueue_scripts', 'aydev_enqueue_styles');
+
+if ( !function_exists( 'aydev_get_the_excerpt') ) {
+    function aydev_get_the_excerpt( string $text ) {
+        return wp_trim_words( $text, 85);
+    }
+}
+add_filter( 'get_the_excerpt', 'aydev_get_the_excerpt');

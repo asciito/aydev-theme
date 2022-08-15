@@ -1,0 +1,10 @@
+.btn {
+    @apply inline-block cursor-pointer transition-colors select-none uppercase
+            bg-gray-200 hover:bg-gray-300 active:bg-gray-200 text-raisin-black
+            px-4 py-2;
+}
+
+.btn.btn-primary {
+    @apply bg-raisin-black hover:bg-opacity-80 active:bg-raisin-black
+            text-floral-white;
+}

@@ -1,3 +1,16 @@
 <?php get_header() ?>
-    <h1 class="text-center text-4xl uppercase">Hello, Front Page</h1>
+<?php if ( have_posts() ): ?>
+    <?php while( have_posts() ): the_post() ?>
+        <?php the_content(); ?>
+    <?php endwhile; ?>
+<?php endif; ?>
+
+<?php
+    $the_query = new WP_Query([
+        'post_type' => 'post',
+        'posts_per_page' => get_option( 'posts_per_page', 5),
+    ]);
+
+    get_template_part('partials/loop', 'entries', ['the_query' => $the_query]);
+?>
 <?php get_footer() ?>

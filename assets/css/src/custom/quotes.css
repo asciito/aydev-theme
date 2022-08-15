@@ -1,0 +1,22 @@
+blockquote {
+    @apply bg-gray-200 shadow-lg border border-gray-200 p-6 my-4;
+}
+
+
+blockquote > p::before, blockquote > p::after {
+    content: "\"";
+    @apply text-brink-pink text-[1.4em];
+}
+
+blockquote > p {
+    @apply text-2xl text-raisin-black md:text-3xl font-medium;
+}
+
+blockquote > cite::before {
+    content: "-";
+    @apply mr-2;
+}
+
+blockquote > cite {
+    @apply inline-block italic text-brink-pink capitalize mt-2;
+}

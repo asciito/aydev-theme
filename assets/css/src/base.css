@@ -1,7 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import 'custom/main.css';
+@import 'custom/typography.css';
+@import 'custom/quotes.css';
+@import 'custom/buttons.css';
 
 body {
     @apply bg-floral-white text-raisin-black p-5;
@@ -65,4 +65,19 @@ ul#ay-primary-menu .ay-menu-item > a {
 
 ul#ay-social-menu .ay-social-item > a {
     @apply block hover:text-brink-pink active:brightness-75;
+}
+
+/* Pagination */
+.pagination-container > .page-numbers {
+    @apply border-2 border-raisin-black w-14 h-14 relative text-xl
+            hover:bg-dotted hover:text-opacity-70
+            select-none;
+}
+
+.page-numbers > * {
+    @apply flex justify-center items-center;
+}
+
+.page-numbers.current {
+    @apply cursor-not-allowed bg-dotted text-opacity-70;
 }

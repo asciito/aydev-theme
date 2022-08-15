@@ -27,4 +27,4 @@
     </header>
 
     <main class="main-container">
-        <div class="inner-container max-w-7xl lg:max-w-[1500px] mx-auto">
+        <div class="inner-container max-w-7xl mx-auto">
