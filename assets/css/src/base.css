@@ -3,6 +3,7 @@
 @import 'custom/quotes.css';
 @import 'custom/buttons.css';
 
+
 body {
     @apply bg-floral-white text-raisin-black p-5;
 }

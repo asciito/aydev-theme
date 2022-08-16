@@ -19,7 +19,7 @@
             <div class="box-container bg-floral-white">
                 <p><?= get_the_excerpt() ?></p>
                 <div class="flex justify-start mt-4">
-                    <a class="btn btn-primary"><?= __( 'Read more', 'aydev' ) ?></a>
+                    <a class="btn btn-primary" href="<?= the_permalink(); ?>"><?= __( 'Read more', 'aydev' ) ?></a>
                 </div>
             </div>
         </div>
