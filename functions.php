@@ -27,15 +27,22 @@ if ( !function_exists( 'aydev_register_menus' ) )
 {
     function aydev_nav_menu_css_class($classes, $item, $nav_menu_obj)
     {
+        $newClasses = [];
         $theme_location = $nav_menu_obj->theme_location ?? null;
-        
+
         if ( $theme_location == 'primary-menu' ) {
-            return ['ay-menu-item'];
+            $newClasses[] = 'ay-menu-item';
         } elseif ( $theme_location == 'social-menu' ) {
-            return ['ay-social-item'];
+            $newClasses[] = 'ay-social-item';
         } else {
             return $classes;
         }
+
+        if ( $item->current ) {
+            $newClasses[] = 'current';
+        }
+
+        return $newClasses;
     }
 }
 add_filter( 'nav_menu_css_class', 'aydev_nav_menu_css_class', 10, 3);

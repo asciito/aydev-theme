@@ -51,6 +51,10 @@ ul#ay-primary-menu .ay-menu-item {
             border-container cursor-pointer;
 }
 
+ul#ay-primary-menu .ay-menu-item.current {
+    @apply bg-dotted;
+}
+
 ul#ay-primary-menu .ay-menu-item > a {
     @apply block w-full h-full p-5;
 }
