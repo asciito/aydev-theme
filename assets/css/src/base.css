@@ -6,6 +6,7 @@
 
 body {
     @apply bg-floral-white text-raisin-black p-5;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Dotted background, code inspiration https://stackoverflow.com/questions/55364127/making-a-dotted-grid-with-css/55364821#55364821 */
