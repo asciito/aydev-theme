@@ -23,5 +23,5 @@ h4 {
 }
 
 p {
-    @apply text-xl;
+    @apply text-xl font-light;
 }
