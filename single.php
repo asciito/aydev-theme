@@ -2,8 +2,10 @@
 <?php if ( have_posts() ): ?>
     <?php while ( have_posts() ): the_post(); ?>
             <div class="relative">
-                <?php the_title('<h1 class="absolute top-0 left-0 ml-4 mt-4 text-white">', '</h1>') ?>
-                <img src="https://picsum.photos/2000/600?grayscale">
+                <?php the_title('<h1 class="absolute top-0 left-0 ml-4 mt-4 text-white drop-shadow-md">', '</h1>') ?>
+                <?php the_post_thumbnail( 'ay_banner_leaderboard_large', [
+                    'class' => 'w-100 h-100 max-w-100 max-h-100'
+                ] ); ?>
             </div>
 
             <hr class="border border-raisin-black mt-4 mb-2 md:mb-8">
@@ -39,7 +41,7 @@
                 title="<?= get_the_title($prev) ?>"
                 class="flex items-center space-x-2 border-container px-4 py-2"
                 href="<?= get_the_permalink($prev) ?>">
-                <span class="text-xl">⬅</span>
+                <span class="text-xl">⬅️</span>
                 <span>Prev</span>
             </a></li>
             <li><a
@@ -47,7 +49,7 @@
                 class="flex items-center space-x-2 border-container px-4 py-2"
                 href="<?= get_the_permalink($prev) ?>">
                 <span>Next</span>
-                <span class="text-xl rotate-180">⬅</span>
+                <span class="text-xl">➡️</span>
             </a></li>
         </ul>
     <?php endwhile ?>

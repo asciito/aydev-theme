@@ -9,9 +9,7 @@
 <article class="entry">
     <div class="flex flex-col md:grid md:grid-cols-12 gap-6 <?= $left ? ' grid-flow-row-dense' : ''?>">
         <header class="box-container col-span-7 self-start <?= !$left ? 'col-start-1' : 'col-end-13' ?>">
-            <img
-                src="https://picsum.photos/1000/1000?grayscale&random=<?= random_int(1, 100) ?>"
-                class="w-100 h-100 max-w-500 max-h-500 border">
+            <?php the_post_thumbnail( 'ay_cube_medium_large', [ 'class' => 'w-100 h-100 grayscale' ] ) ?>
         </header>
 
         <div class="entry-content col-span-5 relative md:mt-20 <?= !$left ? 'col-start-8 md:-ml-48' : 'col-end-6 md:-mr-48' ?> drop-shadow-md">
