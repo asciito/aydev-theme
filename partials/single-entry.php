@@ -9,7 +9,15 @@
 <article class="entry">
     <div class="flex flex-col md:grid md:grid-cols-12 gap-6 <?= $left ? ' grid-flow-row-dense' : ''?>">
         <header class="box-container col-span-7 self-start <?= !$left ? 'col-start-1' : 'col-end-13' ?>">
-            <?php the_post_thumbnail( 'ay_cube_medium_large', [ 'class' => 'w-100 h-100 grayscale' ] ) ?>
+            <?php
+            if ( has_post_thumbnail() ) {
+                the_post_thumbnail( 'ay_cube_medium_large', [ 'class' => 'w-100 h-100 grayscale' ] );
+            } else {
+                echo <<<TMN
+                <img class="w-100 h-100 grayscale" src="https://dummyimage.com/800x800/3c3c3c/fff">
+                TMN;
+            }
+            ?>
         </header>
 
         <div class="entry-content col-span-5 relative md:mt-20 <?= !$left ? 'col-start-8 md:-ml-48' : 'col-end-6 md:-mr-48' ?> drop-shadow-md">
