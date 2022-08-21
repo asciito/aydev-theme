@@ -14,6 +14,18 @@ if ( !function_exists( 'aydev_setup_theme' ) )
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );
 
+        // Image sizes
+        add_image_size( 'ay_cube_medium', 512, 512, true );
+        add_image_size( 'ay_cube_medium_large', 800, 800, true );
+
+        // Image sizes - banners
+        # Leaderboard
+        add_image_size( 'ay_banner_leaderboard', 728, 90, true );
+        add_image_size( 'ay_banner_leaderboard_large', 1456, 180, true );
+        # Skyscraper
+        add_image_size( 'ay_banner_skyscraper', 120, 600, true );
+        add_image_size( 'ay_banner_skyscraper_large', 240, 1200, true );
+        
         // Register menu
         register_nav_menus([
             'primary-menu' => __( 'Primary Menu', 'aydev' ),
