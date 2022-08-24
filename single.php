@@ -1,9 +1,9 @@
 <?php get_header() ?>
 <?php if ( have_posts() ): ?>
     <?php while ( have_posts() ): the_post(); ?>
-            <div class="relative">
-                <?php the_title('<h1 class="absolute top-0 left-0 ml-4 mt-4 text-white drop-shadow-md">', '</h1>') ?>
-                <?php the_post_thumbnail( 'ay_banner_leaderboard_large', [
+            <div class="relative shadow-md border border-gray-300">
+                <?php the_title('<h1 class="absolute bottom-0 left-0 ml-4 m-4 text-white drop-shadow-md">', '</h1>') ?>
+                <?php the_post_thumbnail( 'ay_banner_entry', [
                     'class' => 'w-100 h-100 max-w-100 max-h-100'
                 ] ); ?>
             </div>
@@ -12,9 +12,9 @@
 
             <div class="article-area md:grid md:grid-cols-12 md:gap-5">
                 <div class="article-area--sidebar md:col-span-3">
-                    <ul class="font-light text-xl md:text-2xl flex justify-center md:flex-col md:justify-start space-x-4 md:space-x-0">
+                    <ul class="font-light text-xl flex justify-center md:flex-col md:justify-start space-x-4 md:space-x-0">
                         <li><?= get_the_date('M d, Y') ?></li>
-                        <span class="md:hidden">|</span>
+                        <span class="md:hidden">|</span> 
                         <li>
                             <?= __( 'Author', 'aydev' ); ?>:
                             <span class="italic font-bold"><?= get_the_author() ?></span>
