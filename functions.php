@@ -17,6 +17,7 @@ if ( !function_exists( 'aydev_setup_theme' ) )
         // Image sizes
         add_image_size( 'ay_cube_medium', 512, 512, true );
         add_image_size( 'ay_cube_medium_large', 800, 800, true );
+        add_image_size( 'ay_banner_entry', 1920, 600, true );
 
         // Image sizes - banners
         # Leaderboard
