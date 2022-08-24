@@ -25,6 +25,14 @@ if ( !function_exists( 'aydev_setup_theme' ) )
         # Skyscraper
         add_image_size( 'ay_banner_skyscraper', 120, 600, true );
         add_image_size( 'ay_banner_skyscraper_large', 240, 1200, true );
+
+        // Custom logo
+        add_theme_support( 'custom-logo', [
+            'height'      => 100,
+            'width'       => 400,
+            'flex-height' => true,
+            'flex-width'  => true,
+        ] );
         
         // Register menu
         register_nav_menus([

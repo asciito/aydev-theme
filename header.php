@@ -12,8 +12,17 @@
 </head>
 <body>
     <header class="header-container mb-16">
-        <div class="logo-image flex justify-center">
-            <img src="https://picsum.photos/seed/girl/250/250" class="w-100 max-w-full rounded-full grayscale-[10] box-container">
+        <div class="flex flex-col items-center">
+        <?php
+        $custom_logo_id = get_theme_mod( 'custom_logo' );
+        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+        
+        if ( has_custom_logo( )): ?>
+            <img src="<?= esc_url( $logo[0] )?>" class="w-100 max-w-[300px] rounded-full grayscale-[10] box-container" alt="<?= get_bloginfo( 'name' )?>">
+        <?php else: ?>
+            <img src="https://dummyimage.com/300x300/3c3c3c/ff" class="w-100 max-w-[300px] rounded-full grayscale-[10] box-container">
+        <?php endif; ?>
+            <h2 class="text-lg uppercase mt-4 text-center" style="letter-spacing: .8rem;">código en las venas</h2>
         </div>
 
         <?php
