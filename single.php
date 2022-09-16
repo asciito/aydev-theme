@@ -19,6 +19,9 @@
                             <?= __( 'Author', 'aydev' ); ?>:
                             <span class="italic font-bold"><?= get_the_author() ?></span>
                         </li>
+                        <li class="hidden md:block">
+                            <span class="text-sm text-gray-600"><?= get_the_author_meta( 'description' ) ?></span>
+                        </li>
                     </ul>
                 </div>
 
@@ -35,8 +38,7 @@
         <ul class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between">
             <?php
             $prev = get_previous_post();
-            $next = get_next_post();
-            ?>
+            $next = get_next_post(); ?>
             <li><a
                 title="<?= get_the_title($prev) ?>"
                 class="flex items-center space-x-2 border-container px-4 py-2"
@@ -45,9 +47,9 @@
                 <span>Prev</span>
             </a></li>
             <li><a
-                title="<?= get_the_title($next) ?>"
+                title="<?= get_the_title( $next ) ?>"
                 class="flex items-center space-x-2 border-container px-4 py-2"
-                href="<?= get_the_permalink($prev) ?>">
+                href="<?= get_the_permalink( $next ) ?>">
                 <span>Next</span>
                 <span class="text-xl">➡️</span>
             </a></li>
