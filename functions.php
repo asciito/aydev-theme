@@ -88,3 +88,5 @@ if ( !function_exists( 'aydev_get_the_excerpt') ) {
     }
 }
 add_filter( 'get_the_excerpt', 'aydev_get_the_excerpt');
+
+require __DIR__ . '/helpers/functions.php';
