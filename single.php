@@ -25,7 +25,7 @@ $thumb_classes = 'w-100 h-100 max-w-100 max-h-100';
                             <span class="italic font-bold"><?= get_the_author() ?></span>
                         </li>
                         <li class="hidden md:block">
-                            <span class="text-sm text-gray-600"><?= get_the_author_meta( 'description' ) ?></span>
+                            <span class="text-sm text-gray-600"><?= get_the_author_meta( 'description' ) ?: 'You still not have a bio?, go to your profile setting and add one. And remember not to show your user name (it\'s set by default)' ?></span>
                         </li>
                     </ul>
                 </div>
