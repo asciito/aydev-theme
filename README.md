@@ -7,15 +7,16 @@ This theme works with the latest version of [WordPress](https://wordpress.org) (
 ## Install the theme
 
 To install the theme in your [WordPress](https://wordpress.org), first you need to download/clone the repo, then enter to
-the repo by running the command ```cd aydev-theme/```. Once you're in the folder run the ```npm``` command:
+the repo by running the command ```cd aydev-theme/```. Once you're in the folder run the following command:
 ```bash
-npm run prod
+docker compose exec --it web npm run prod
 ```
+
+With this command we ensure to compile the CSS with the same **Node** version every time we use the container, so you don't need
+to install anything else, just **docker** and that's it all the processes are handled inside the container.
 
 ---
 ## Developer mode
-
-> 💡 Before you begin you need to install [Docker](https://www.docker.com)
 
 Enter the **aydev-theme**:
 
