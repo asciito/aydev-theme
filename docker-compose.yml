@@ -1,6 +1,6 @@
 services:
   web:
-    image: wordpress
+    build: .
     restart: always
     networks:
       - wordpress
