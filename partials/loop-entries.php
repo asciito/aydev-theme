@@ -7,7 +7,7 @@
 ?>
 
 <div class="entries-container flex flex-col space-y-16 md:space-y-10">
-<?php if ( have_posts() ): $i = 1 ?>
+<?php if ( !have_posts() ): $i = 1 ?>
     <?php while ( have_posts() ): the_post() ?>
         <?php get_template_part( 'partials/single', 'entry', [ 'left' => $i % 2 !== 0 ] ); ?>
     <?php $i++; endwhile; ?>
@@ -26,8 +26,8 @@
     <?php endif ?>
     
 <?php else: ?>
-    <p class="box-container text-2xl text-center max-w-2xl">
-        <?= __( 'There\'s no entries avaliable right now, back later', 'aydev' ); ?>
+    <p class="box-container text-2xl text-center max-w-2xl self-center">
+        <?= __( 'There\'s no entries available right now, back later', 'aydev' ); ?>
     </p>
 <?php endif; ?>
 </div>
