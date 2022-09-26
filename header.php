@@ -25,17 +25,26 @@
             <h2 class="text-lg uppercase mt-4 text-center" style="letter-spacing: .8rem;">código en las venas</h2>
         </div>
 
+        <div class="relative">
+
         <?php
-        wp_nav_menu([
-            'theme_location' => 'primary-menu',
-            'menu_class' => 'ay-menu',
-            'menu_id' => 'ay-primary-menu',
-            'container' => 'nav',
-            'container_class' => 'ay-nav-container',
-            'container_id' => 'ay-primary-container',
-            'depth' => 1,
-        ]);
-        ?>
+            wp_nav_menu([
+                'theme_location' => 'primary-menu',
+                'menu_class' => 'ay-menu',
+                'menu_id' => 'ay-primary-menu',
+                'container' => 'nav',
+                'container_class' => 'ay-nav-container',
+                'container_id' => 'ay-primary-container',
+                'depth' => 1,
+            ]);
+            ?>
+
+            <div class="block lg:hidden absolute -right-4 -bottom-[5.5rem] flex flex-wrap space-y-2 w-11 cursor-pointer" data-menu="#ay-primary-container">
+                <div class="w-full h-1 bg-raisin-black"></div>
+                <div class="w-full h-1 bg-raisin-black"></div>
+                <div class="w-full h-1 bg-raisin-black"></div>
+            </div>
+        </div>
     </header>
 
     <main class="main-container">

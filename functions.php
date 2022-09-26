@@ -72,6 +72,8 @@ if ( !function_exists( 'aydev_enqueue_styles' ) )
 {
     function aydev_enqueue_styles()
     {
+        wp_enqueue_style( 'dashicons' );
+
         wp_enqueue_style(
             'aydev_base',
             get_template_directory_uri().'/assets/css/dist/base.css',
@@ -81,6 +83,20 @@ if ( !function_exists( 'aydev_enqueue_styles' ) )
     }
 }
 add_action('wp_enqueue_scripts', 'aydev_enqueue_styles');
+
+if ( !function_exists( 'aydev_enqueue_scripts' ) )
+{
+    function aydev_enqueue_scripts()
+    {
+        wp_enqueue_script(
+            'aydev_main',
+            get_template_directory_uri().'/assets/js/main.js',
+            [],
+            AYDEV_VER,
+        );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'aydev_enqueue_scripts' );
 
 if ( !function_exists( 'aydev_get_the_excerpt') ) {
     function aydev_get_the_excerpt( string $text ) {
