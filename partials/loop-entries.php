@@ -7,7 +7,7 @@
 ?>
 
 <div class="entries-container flex flex-col space-y-16 md:space-y-10">
-<?php if ( !have_posts() ): $i = 1 ?>
+<?php if ( have_posts() ): $i = 1 ?>
     <?php while ( have_posts() ): the_post() ?>
         <?php get_template_part( 'partials/single', 'entry', [ 'left' => $i % 2 !== 0 ] ); ?>
     <?php $i++; endwhile; ?>
