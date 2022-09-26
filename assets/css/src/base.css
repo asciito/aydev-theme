@@ -2,11 +2,20 @@
 @import 'custom/typography.css';
 @import 'custom/quotes.css';
 @import 'custom/buttons.css';
+@import 'custom/main-menu.scss';
 
 
 body {
     @apply bg-floral-white text-raisin-black p-5;
     font-family: 'Roboto Mono', monospace;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
 }
 
 /* Dotted background, code inspiration https://stackoverflow.com/questions/55364127/making-a-dotted-grid-with-css/55364821#55364821 */
@@ -38,40 +47,6 @@ body {
     @apply border-container px-5 py-10;
 }
 
-/* Menu */
-.ay-nav-container {
-    @apply relative mt-5;
-}
-
-.ay-nav-container > ul#ay-primary-menu {
-    @apply absolute w-full flex justify-center space-x-4;
-}
-
-ul#ay-primary-menu .ay-menu-item {
-    @apply bg-floral-white hover:bg-dotted transition-colors text-raisin-black
-            uppercase text-2xl
-            border-container cursor-pointer;
-}
-
-ul#ay-primary-menu .ay-menu-item.current {
-    @apply bg-dotted;
-}
-
-ul#ay-primary-menu .ay-menu-item > a {
-    @apply block w-full h-full p-5;
-}
-
-.ay-social-container {
-    @apply mt-36;
-}
-
-.ay-social-container > ul#ay-social-menu {
-    @apply flex justify-center space-x-4;
-}
-
-ul#ay-social-menu .ay-social-item > a {
-    @apply block hover:text-brink-pink active:brightness-75;
-}
 
 /* Pagination */
 .pagination-container > .page-numbers {
