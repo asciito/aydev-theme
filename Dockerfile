@@ -23,6 +23,7 @@ RUN volta install node
 RUN npm config set unsafe-perm true && \
     # Currently we are in the folder /var/www/html so wee need to move to our theme folder
     cd ./wp-content/themes/aydev && \
+    npm install && \
     npm run prod
 
 EXPOSE 80
