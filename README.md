@@ -6,35 +6,13 @@ This theme works with the latest version of [WordPress](https://wordpress.org) (
 ---
 ## Install the theme
 
-To install the theme in your [WordPress](https://wordpress.org), first you need to download/clone the repo, then enter to
-the repo by running the command ```cd aydev-theme/```. Once you're in the folder run the following command:
-```bash
-docker compose exec --it web npm run prod
-```
-
-With this command we ensure to compile the CSS with the same **Node** version every time we use the container, so you don't need
-to install anything else, just **docker** and that's it all the processes are handled inside the container.
+To install the theme in your [WordPress](https://wordpress.org), first you need to download/clone the repo directly in
+your *themes* folder, or just download it as a zip file and install it in **Apearance > Themes** then press **add new** button
+and finally press **Upload Theme** and drag your zip file, and press **install**. That's all, now you can follow the instructions
+to configure the theme.
 
 ---
-## Developer mode
 
-Enter the **aydev-theme**:
-
-```bash
-cd aydev-theme
-```
-
-Then copy the file ```.env.example``` and rename it to ```.env```, you can use this command to do it right in the terminal:
-
-```bash
-cp .env.example .env
-```
-
-> 💡Change the env variables as you please, but for testing purpose they're fine
-
-Now that everything is set up just run the command ```docker compose up -d``` and just go to [localhost:8080/wp-login.php](http://localhost:8080/wp-login.php)
-
----
 ## Theme configuration
 Once you're in the **admin** area go to **Appearance > Themes** and activate the **theme**.
 
