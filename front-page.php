@@ -5,7 +5,6 @@
     <?php endwhile; ?>
 <?php endif; ?>
 
-
 <h2 class="mt-5 mb-20 inline-block pb-4 pr-10 md:pr-20 border-b-4 border-b-raisin-black">Latest posts</h2>
 
 <?php

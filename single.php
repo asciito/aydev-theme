@@ -4,14 +4,15 @@ $thumb_classes = 'w-100 h-100 max-w-100 max-h-100';
 ?>
 <?php if ( have_posts() ): ?>
     <?php while ( have_posts() ): the_post(); ?>
-            <div class="relative shadow-md border border-gray-300">
+        <article>
+            <header class="relative shadow-md border border-gray-300">
                 <?php the_title('<h1 class="absolute bottom-0 left-0 ml-4 m-4 text-white drop-shadow-md">', '</h1>') ?>
                 <?php if( has_post_thumbnail() ): ?>
                     <?php the_post_thumbnail( 'ay_banner_entry', [ 'class' => $thumb_classes ] ); ?>
                 <?php else : ?>
                     <img src="<?php echo esc_url( dummy_image(1920, 600) ); ?>" class="<?php echo $thumb_classes ?>" alt="">
                 <?php endif; ?>
-            </div>
+            </header>
 
             <hr class="border border-raisin-black mt-4 mb-2 md:mb-8">
 

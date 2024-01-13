@@ -5,8 +5,6 @@
             <span class="block text-[.5em] font-light">page not found</span>
         </h1>
 
-        <a
-            class="inline-block border-container px-4 py-2 hover:bg-dotted"
-            href="/">⬅️ Go back home</a>
+        <a class="inline-block border-container px-4 py-2 hover:bg-dotted" href="/">⬅️ Go back home</a>
     </div>
 <?php get_footer(); ?>
