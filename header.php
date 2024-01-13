@@ -13,9 +13,9 @@
             <img src="<?php echo esc_url( aydev_get_custom_logo() )?>" class="w-full min-w-[200px] max-w-[300px] rounded-full box-container" alt="Logo for for site <?php echo get_bloginfo( 'name' )?>">
 
             <h2 class="text-lg uppercase mt-4 text-center" style="letter-spacing: .8rem;">código en las venas</h2>
-        <div class="relative">
+        <div class="relative w-full">
 
-        <?php
+            <?php
             wp_nav_menu( [
                 'theme_location' => 'primary-menu',
                 'menu_class' => 'ay-menu',
