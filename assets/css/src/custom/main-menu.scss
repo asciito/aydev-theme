@@ -40,6 +40,14 @@ ul#ay-primary-menu .ay-menu-item > a {
   @apply flex justify-center space-x-4;
 }
 
-ul#ay-social-menu .ay-social-item > a {
-  @apply block hover:text-brink-pink active:brightness-75;
+ul#ay-social-menu .ay-social-item {
+    & > a {
+        @apply block hover:text-brink-pink active:brightness-75;
+    }
+
+    ~ *:not([hidden]) > a {
+        @apply  border-l border-gray-800 pl-4;
+    }
 }
+
+
