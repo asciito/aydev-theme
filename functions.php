@@ -1,14 +1,21 @@
 <?php
+/**
+ * Functions file
+ *
+ * @package Aydev
+ * @since 1.0.0
+ */
 
-if (!defined('ABSPATH')) {
+
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define('AYDEV_VER', '1.0.0');
+define( 'AYDEV_VER', '1.0.0' );
 
-if ( !function_exists( 'aydev_setup_theme' ) )
+if ( ! function_exists( 'aydev_setup_theme' ) )
 {
-    function aydev_setup_theme()
+    function aydev_setup_theme(): void
     {
         // Theme support
         add_theme_support( 'title-tag' );
@@ -38,17 +45,26 @@ if ( !function_exists( 'aydev_setup_theme' ) )
         // Register menu
         register_nav_menus([
             'primary-menu' => __( 'Primary Menu', 'aydev' ),
-            'social-menu' => __( 'Social Menu', 'aydev' ), 
+            'social-menu'  => __( 'Social Menu', 'aydev' ),
         ]);
     }
 }
 add_action( 'after_setup_theme', 'aydev_setup_theme' );
 
-if ( !function_exists( 'aydev_register_menus' ) )
+if ( ! function_exists( 'aydev_register_menus' ) )
 {
-    function aydev_nav_menu_css_class($classes, $item, $nav_menu_obj)
+    /**
+     * Filter nav menu css classes
+     *
+     * @param array $classes Array of css classes
+     * @param WP_Post $item Menu item
+     * @param stdClass $nav_menu_obj Menu object
+     *
+     * @return array The new array of css classes
+     */
+    function aydev_nav_menu_css_class(array $classes, WP_Post $item, stdClass $nav_menu_obj): array
     {
-        $newClasses = [];
+        $newClasses     = [];
         $theme_location = $nav_menu_obj->theme_location ?? null;
 
         if ( $theme_location == 'primary-menu' ) {
@@ -68,15 +84,15 @@ if ( !function_exists( 'aydev_register_menus' ) )
 }
 add_filter( 'nav_menu_css_class', 'aydev_nav_menu_css_class', 10, 3);
 
-if ( !function_exists( 'aydev_enqueue_styles' ) )
+if ( ! function_exists( 'aydev_enqueue_styles' ) )
 {
-    function aydev_enqueue_styles()
+    function aydev_enqueue_styles(): void
     {
         wp_enqueue_style( 'dashicons' );
 
         wp_enqueue_style(
             'aydev_base',
-            get_template_directory_uri().'/assets/css/dist/base.css',
+            get_template_directory_uri() . '/assets/css/dist/base.css',
             [],
             AYDEV_VER
         );
@@ -84,13 +100,13 @@ if ( !function_exists( 'aydev_enqueue_styles' ) )
 }
 add_action('wp_enqueue_scripts', 'aydev_enqueue_styles');
 
-if ( !function_exists( 'aydev_enqueue_scripts' ) )
+if ( ! function_exists( 'aydev_enqueue_scripts' ) )
 {
-    function aydev_enqueue_scripts()
+    function aydev_enqueue_scripts(): void
     {
         wp_enqueue_script(
             'aydev_main',
-            get_template_directory_uri().'/assets/js/main.js',
+            get_template_directory_uri() . '/assets/js/main.js',
             [],
             AYDEV_VER,
         );
@@ -98,8 +114,9 @@ if ( !function_exists( 'aydev_enqueue_scripts' ) )
 }
 add_action( 'wp_enqueue_scripts', 'aydev_enqueue_scripts' );
 
-if ( !function_exists( 'aydev_get_the_excerpt') ) {
-    function aydev_get_the_excerpt( string $text ) {
+if ( ! function_exists( 'aydev_get_the_excerpt') ) {
+    function aydev_get_the_excerpt( string $text ): string
+    {
         return wp_trim_words( $text, 85);
     }
 }
