@@ -91,6 +91,13 @@ if ( ! function_exists( 'aydev_enqueue_styles' ) )
         wp_enqueue_style( 'dashicons' );
 
         wp_enqueue_style(
+            'aydev_google_fonts',
+            "https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap",
+            [],
+            null
+        );
+
+        wp_enqueue_style(
             'aydev_base',
             get_template_directory_uri() . '/assets/css/dist/base.css',
             [],
@@ -99,6 +106,17 @@ if ( ! function_exists( 'aydev_enqueue_styles' ) )
     }
 }
 add_action('wp_enqueue_scripts', 'aydev_enqueue_styles');
+
+if ( ! function_exists( 'aydev_head' ) ) {
+    function aydev_head(): void
+    {
+        ?>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <?php
+    }
+}
+add_action( 'wp_head', 'aydev_head', 5 );
 
 if ( ! function_exists( 'aydev_enqueue_scripts' ) )
 {
