@@ -1,9 +1,16 @@
 <?php
-    global $wp_query;
+/**
+ * Partial template for a loop of entries
+ *
+ * @package Aydev
+ * @since 1.0.0
+ */
 
-    if ( key_exists( 'the_query', $args ) ) {
-        $the_query = $wp_query = $args['the_query'];
-    }
+global $wp_query;
+
+if ( key_exists( 'the_query', $args ) ) {
+    $the_query = $wp_query = $args['the_query'];
+}
 ?>
 
 <div class="entries-container flex flex-col space-y-16 md:space-y-10">

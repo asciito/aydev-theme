@@ -1,9 +1,16 @@
 <?php
-    if ( key_exists( 'left', $args ) ) {
-        $left = $args[ 'left' ];
-    } else {
-        $left = false;
-    }
+/**
+ * Partial template for a single entry in a loop
+ *
+ * @package Aydev
+ * @since 1.0.0
+ */
+
+if ( key_exists( 'left', $args ) ) {
+    $left = $args[ 'left' ];
+} else {
+    $left = false;
+}
 ?>
 
 <article class="entry">
