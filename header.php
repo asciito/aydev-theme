@@ -18,7 +18,7 @@
         $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         
         if ( has_custom_logo( )): ?>
-            <img src="<?= esc_url( $logo[0] )?>" class="w-full min-w-[200px] max-w-[300px]" alt="<?= get_bloginfo( 'name' )?>">
+            <img src="<?php echo esc_url( $logo[0] )?>" class="w-full min-w-[200px] max-w-[300px]" alt="<?php echo get_bloginfo( 'name' )?>">
         <?php else: ?>
             <img src="https://dummyimage.com/300x300/3c3c3c/ff" class="w-100 max-w-[300px] rounded-full grayscale-[10] box-container">
         <?php endif; ?>

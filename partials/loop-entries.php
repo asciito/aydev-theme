@@ -16,7 +16,7 @@
         $the_query->reset_postdata(); ?>
     <?php else: ?>
         <div class="pagination-container flex justify-center space-x-4">
-        <?= paginate_links( [
+        <?php echo paginate_links( [
             'total' => $wp_query->max_num_pages,
             'before_page_number' => '<span class="screen-reader-text">Page</span><span class="number">',
             'after_page_number' => '</span>',
@@ -27,7 +27,7 @@
     
 <?php else: ?>
     <p class="box-container text-2xl text-center max-w-2xl self-center">
-        <?= __( 'There\'s no entries available right now, back later', 'aydev' ); ?>
+        <?php echo __( 'There\'s no entries available right now, back later', 'aydev' ); ?>
     </p>
 <?php endif; ?>
 </div>
