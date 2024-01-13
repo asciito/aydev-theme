@@ -48,6 +48,12 @@ if ( ! function_exists( 'aydev_setup_theme' ) )
             'social-menu'  => __( 'Social Menu', 'aydev' ),
         ]);
     }
+
+    add_theme_support( 'editor-styles' );
+
+    add_editor_style( [
+        'assets/css/dist/base.css',
+    ] );
 }
 add_action( 'after_setup_theme', 'aydev_setup_theme' );
 
