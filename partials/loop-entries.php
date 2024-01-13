@@ -1,9 +1,16 @@
 <?php
-    global $wp_query;
+/**
+ * Partial template for a loop of entries
+ *
+ * @package Aydev
+ * @since 1.0.0
+ */
 
-    if ( key_exists( 'the_query', $args ) ) {
-        $the_query = $wp_query = $args['the_query'];
-    }
+global $wp_query;
+
+if ( key_exists( 'the_query', $args ) ) {
+    $the_query = $wp_query = $args['the_query'];
+}
 ?>
 
 <div class="entries-container flex flex-col space-y-16 md:space-y-10">
@@ -16,7 +23,7 @@
         $the_query->reset_postdata(); ?>
     <?php else: ?>
         <div class="pagination-container flex justify-center space-x-4">
-        <?= paginate_links( [
+        <?php echo paginate_links( [
             'total' => $wp_query->max_num_pages,
             'before_page_number' => '<span class="screen-reader-text">Page</span><span class="number">',
             'after_page_number' => '</span>',
@@ -27,7 +34,7 @@
     
 <?php else: ?>
     <p class="box-container text-2xl text-center max-w-2xl self-center">
-        <?= __( 'There\'s no entries available right now, back later', 'aydev' ); ?>
+        <?php echo __( 'There\'s no entries available right now, back later', 'aydev' ); ?>
     </p>
 <?php endif; ?>
 </div>
