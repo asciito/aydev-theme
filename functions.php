@@ -122,4 +122,17 @@ if ( ! function_exists( 'aydev_get_the_excerpt') ) {
 }
 add_filter( 'get_the_excerpt', 'aydev_get_the_excerpt');
 
+if ( ! function_exists( 'aydev_get_custom_logo' ) ) {
+    function aydev_get_custom_logo(): string
+    {
+        $logo_id = get_option( 'custom_logo' );
+
+        if ( $logo_id ) {
+            return wp_get_attachment_image_src( $logo_id )[0];
+        }
+
+        return "https://dummyimage.com/300x300/3c3c3c/ff";
+    }
+}
+
 require __DIR__ . '/helpers/functions.php';
